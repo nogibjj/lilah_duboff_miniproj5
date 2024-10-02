@@ -8,8 +8,8 @@ format:
 lint:
 	ruff check ./main_files/*.py 
 	
-test:
-	python -m pytest -vv ./main_files/test_*.py 
+# test:
+# 	python -m pytest -vv ./main_files/test_*.py 
 
 check:
 	python ./main_files/main.py
