@@ -1,5 +1,4 @@
-pylint 
-click 
-black
+pylint
+black 
 pytest
-pytest-cov
+ruff 
