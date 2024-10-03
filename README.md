@@ -53,3 +53,4 @@
 
 ---
 ### Arch Diagram and Explanation
+https://github.com/nogibjj/sqlite_python_CRUD_tr/blob/2572d4c90d4edf90ee25adff16fd677291d47975/workflow.png
