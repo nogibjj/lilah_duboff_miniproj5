@@ -1,4 +1,4 @@
-# can use this file to extract csv from a url, in this case not applicable because I have the data loaded, but this won't always be the case
+# can use this file to extract csv from a url
 """ This file can take csv data from a url and extract it to be transformed and queried """
 
 import requests
