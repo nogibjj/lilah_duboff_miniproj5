@@ -3,16 +3,16 @@ install:
 		pip install -r requirements.txt
 
 format:
-	black ./main_files
+	black *.py
 
 lint:
-	ruff check ./main_files/*.py 
+	ruff check *.py 
 	
 test:
-	python -m pytest -vv ./main_files/test_*.py 
+	python -m pytest -vv test_*.py 
 
 check:
-	python ./main_files/main.py
+	python main.py
 	git config --local user.email "action@github.com"; \
 	git config --local user.name "Github Action"; \
 	git add .; \
