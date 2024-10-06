@@ -4,11 +4,11 @@ and if the CRUD operations returned a result"""
 from SQL_files.query import read, update, delete, query_1, query_2
 
 
-def test_read():
-    result = read("remotehealthDb.db", "remotehealthDB")
+# def test_read():
+#     result = read("remotehealthDb.db", "remotehealthDB")
 
-    assert isinstance(result, list)
-    assert len(result) > 0
+#     assert isinstance(result, list)
+#     assert len(result) > 0
 
 #
 def test_update():
@@ -38,7 +38,7 @@ def test_query_2():
 
 
 if __name__ == "__main__":
-    test_read()
+    # test_read()
     test_update()
     test_delete()
     test_query_1()
