@@ -6,17 +6,15 @@ import csv
 def transform(data):
     """Transforms and loads data into the database"""
 
-
     payload = csv.reader(open(data, newline=""), delimiter=",")
     next(payload)
 
-
     conn = sqlite3.connect("remotehealthDB.db")
     c = conn.cursor()
-    c.execute("DROP TABLE IF EXISTS remotehealthDB")
+    c.execute("DROP TABLE IF EXISTS remote_health")
     c.execute(
         """
-              CREATE TABLE remotehealthDB (
+              CREATE TABLE remote_health (
                     Employee_ID,
                     Gender, 
                     Age,
@@ -42,11 +40,9 @@ def transform(data):
     )
     # insert
     c.executemany(
-        """INSERT INTO remotehealthDB VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
-       payload,
+        """INSERT INTO remote_health VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+        payload,
     )
     conn.commit()
     conn.close()
     return "remotehealthDB.db"
-
-

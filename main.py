@@ -5,10 +5,10 @@ ETL-Query script
 
 from SQL_files.extract import extract_data
 from SQL_files.transform import transform
-from SQL_files.query import read, update, delete, query_1, query_2
+from SQL_files.query import create, read, update, delete, query_1, query_2
 
 database = "remotehealthDB.db"
-table = "remotehealthDB"
+table = "remote_health"
 url = "https://raw.githubusercontent.com/lilah-duboff/data-for-URLS/refs/heads/main/Impact_of_Remote_Work_on_Mental_Health.csv"
 path = "data/remote_work_mental_health_data.csv"
 folder = "data"
@@ -24,6 +24,7 @@ def main():
     transform(path)
 
     # CRUD
+    create(database, table)
     read(database, table)
     update(database, table, "Age", 35, "EMP0040")
     delete(database, table, "EMP0040")
