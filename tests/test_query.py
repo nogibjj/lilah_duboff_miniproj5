@@ -2,8 +2,6 @@
 and if the CRUD operations returned a result"""
 
 from SQL_files.query import read, update, delete, query_1, query_2
-import sqlite3
-
 
 
 def test_read():
@@ -12,7 +10,7 @@ def test_read():
     assert isinstance(result, list)
     assert len(result) > 0
 
-# data, table, column, new_value, ID_number
+#
 def test_update():
     ID_number = "EMP0001"
     column = "Age"
