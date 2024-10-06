@@ -9,7 +9,7 @@ lint:
 	ruff check *.py 
 	
 test:
-	python -m pytest -vv test_*.py 
+	python -m pytest -vv tests/test_*.py 
 
 check:
 	python main.py
@@ -24,12 +24,3 @@ deploy:
 
 all: install lint format test 
 
-extract:
-	python main.py extract
-
-transform_load: 
-	python main.py transform_load
-
-query:
-	# using delete query as an example
-	python main.py delete_record 10

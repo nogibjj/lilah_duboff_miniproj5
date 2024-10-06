@@ -5,14 +5,16 @@ import requests
 import os
 
 
-def extract_data():
+def extract_data(url, path, directory):
     """Extract data from a url to a file path"""
-    url = "https://github.com/lilah-duboff/data-for-URLS/blob/main/Impact_of_Remote_Work_on_Mental_Health.csv"
-    path = "data/remote_work_mental_health_data.csv"
-    directory = "data"
     if not os.path.exists(directory):
         os.makedirs(directory)
     with requests.get(url) as r:
         with open(path, "wb") as f:
             f.write(r.content)
     return path
+
+
+
+
+

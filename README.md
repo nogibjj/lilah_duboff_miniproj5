@@ -53,3 +53,8 @@
 
 ---
 ### Arch Diagram and Explanation
+
+
+---
+### Query Results
+![alt text](<Screenshot 2024-10-05 at 3.54.12 PM.png>)
