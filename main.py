@@ -13,17 +13,17 @@ url = "https://raw.githubusercontent.com/lilah-duboff/data-for-URLS/refs/heads/m
 path = "data/remote_work_mental_health_data.csv"
 folder = "data"
 payload = (
-    "EMP0001",
-    32,
+    "EMP5001",
+    37,
     "Non-binary",
-    "HR",
+    "Nurse",
     "Healthcare",
-    13,
+    12,
     "Hybrid",
-    47,
+    46,
     7,
     2,
-    "Medium",
+    "Low",
     "Depression",
     "No",
     "Decrease",
