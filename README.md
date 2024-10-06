@@ -1,4 +1,4 @@
-[![Python Application Test with Github Actions](https://github.com/lilah-duboff/scaffold/actions/workflows/main.yml/badge.svg)](https://github.com/lilah-duboff/scaffold/actions/workflows/main.yml)
+[![Python Application Test with Github Actions](https://github.com/nogibjj/lilah_duboff_miniproj5/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/lilah_duboff_miniproj5/actions/workflows/main.yml)
 
 ![alt text](<passing_test_functions.png>)
 
@@ -59,7 +59,7 @@
 ---
 ### Arch Diagram and Explanation
 ##### The following diagram displays the map of how ETL processes work in SQLite. [E] Extract a dataset from URL, [T] Transform, [L] Load into SQLite Database and [Q] Query For the ETL-Query lab
-![alt text](<ETL with SQLite.png>)
+![alt text](ETL_diagram.png)
 
 ---
 ### Query Results
