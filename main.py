@@ -12,29 +12,36 @@ table = "remote_health"
 url = "https://raw.githubusercontent.com/lilah-duboff/data-for-URLS/refs/heads/main/Impact_of_Remote_Work_on_Mental_Health.csv"
 path = "data/remote_work_mental_health_data.csv"
 folder = "data"
+payload = ('EMP0001', 32, 'Non-binary', 'HR', 'Healthcare', 13, 'Hybrid', 47, 7, 2, 'Medium', 'Depression', 'No', 'Decrease', 1, 'Unsatisfied', 1, 'Weekly', 'Good', 'Europe')
 
 
-def main():
-    # Extract
-    print("Extracting data...")
-    extract_data(url, path, folder)
+# Extract
+print("Extracting data...")
+extract_data(url, path, folder)
 
-    # Transform and load/create
-    print("Transforming data...")
-    transform(path)
-
-    # CRUD
-    create(database, table)
-    read(database, table)
-    update(database, table, "Age", 35, "EMP0040")
-    delete(database, table, "EMP0040")
-
-    # Query
-    print("First query...")
-    print(query_1())
-    print("Second query...")
-    print(query_2())
+# Transform and load/create
+print("Transforming data...")
+transform(path)
 
 
-if __name__ == "__main__":
-    main()
+# CREATE
+create(payload, database, table)
+
+# READ
+read(database, table)
+
+# UPDATE
+update(database, table, "Age", 35, "EMP0040")
+
+# DELETE
+delete(database, table, "EMP0040")
+
+
+
+# Query
+print("First query...")
+print(query_1())
+print("Second query...")
+print(query_2())
+
+

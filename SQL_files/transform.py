@@ -1,4 +1,5 @@
 # This file should take the cvs data and convert it into a database, or .db file
+#performs the CREATE from CRUD operations
 import sqlite3
 import csv
 
@@ -45,4 +46,5 @@ def transform(data):
     )
     conn.commit()
     conn.close()
-    return "remotehealthDB.db"
+    print(payload)
+    return payload

@@ -3,12 +3,13 @@ and if the CRUD operations returned a result"""
 
 from SQL_files.query import create, read, update, delete, query_1, query_2
 
+payload = ('EMP0001', 32, 'Non-binary', 'HR', 'Healthcare', 13, 'Hybrid', 47, 7, 2, 'Medium', 'Depression', 'No', 'Decrease', 1, 'Unsatisfied', 1, 'Weekly', 'Good', 'Europe')
 
 def test_create():
     table_name = "remote_health"
     data = "remotehealthDB.db"
-    result = create(data, table_name)
-    assert result == "remote_health"
+    result = create(payload, data, table_name)
+    assert result == "Record inserted successfully"
 
 
 def test_read():
